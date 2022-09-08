@@ -1,4 +1,6 @@
 # happi-explorer
+[![CodeQL](https://github.com/Argragas/SMR/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Argragas/SMR/actions/workflows/codeql.yml)
+[![Sonar](https://github.com/Argragas/SMR/actions/workflows/sonar.yml/badge.svg?branch=main)](https://github.com/Argragas/SMR/actions/workflows/sonar.yml)
 
 **H**yper **A**pplication **P**owerful **P**rogramming **I**nterface - **E**xplorer
 A generic and dynamic endpoint for basic **CRUD** *(Create, Read, Update, Delete)* operation.  
