@@ -7,9 +7,9 @@
             auth="Container"
             driverClassName="org.postgresql.Driver"
             type="javax.sql.DataSource"
-            username="user"
-            password="pwd"
-            url="jdbc:postgresql://localhost:8042/explorer"
+            username="poi"
+            password="pwd_fabnum_postgres!"
+            url="jdbc:postgresql://postgresql:5432/explorer"
     />
 
     <!-- CDI Support -->
@@ -36,5 +36,11 @@
             factory="com.arjuna.ats.internal.jta.transaction.arjunacore.UserTransactionImple"
     />
 
-
+    <Context antiResourceLocking="false" privileged="true" >
+        <!--
+          <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+               allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+        -->
+        <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+    </Context>
 </Context>

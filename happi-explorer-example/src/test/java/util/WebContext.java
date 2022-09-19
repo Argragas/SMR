@@ -2,7 +2,7 @@ package util;
 
 public final class WebContext {
 
-    public static final String HOST = "localhost";
+    public static final String HOST = "0.0.0.0";
 
     public static final int PORT = 8080;
 

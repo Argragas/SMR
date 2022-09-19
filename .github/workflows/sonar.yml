@@ -15,13 +15,21 @@ jobs:
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting.
           fetch-depth: 0
+      - name: postgres
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '14.5'
+          postgresql db: explorer
+          postgresql user: user
+          postgresql password: pwd
+
 
       - name: build
         uses: s4u/setup-maven-action@v1.4.0
         with:
           java-version: 17
           maven-version: 3.8.1
-      - run: mvn clean install
+      - run: mvn clean install -DskipTests
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan

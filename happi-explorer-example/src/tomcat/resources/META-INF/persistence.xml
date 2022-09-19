@@ -18,9 +18,9 @@
 
                 Populate the database during deployment.
             -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
-            <property name="jakarta.persistence.schema-generation.scripts.create-source" value="metadata"/>
-            <property name="jakarta.persistence.schema-generation.scripts.drop-source" value="metadata"/>
+<!--            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>-->
+<!--            <property name="jakarta.persistence.schema-generation.scripts.create-source" value="metadata"/>-->
+<!--            <property name="jakarta.persistence.schema-generation.scripts.drop-source" value="metadata"/>-->
 
             <!--
                 /!\ Hibernate property:

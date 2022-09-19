@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+    tomcat:
+      image: chexplorer:latest
+      container_name: explorer_container
+      ports:
+        - "8080:8080"
+      depends_on:
+        - postgresql
+      networks:
+        - main
+
+    postgresql :
+      image: postgres:13.0-alpine
+      container_name: postgresql
+      ports:
+        - "5432:5432"
+      environment:
+        POSTGRES_USER: poi
+        POSTGRES_PASS: pwd_fabnum_postgres!
+        POSTGRES_DBNAME : explorer
+        POSTGRES_PASSWORD: pwd_fabnum_postgres!
+      networks:
+        - main
+
+
+networks:
+      main:
