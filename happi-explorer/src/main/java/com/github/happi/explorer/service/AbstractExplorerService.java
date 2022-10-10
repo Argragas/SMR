@@ -50,6 +50,8 @@ public abstract class AbstractExplorerService implements ExplorerService {
     @Inject
     protected ExplorerDAO dao;
 
+    private static final Logger LOG = Logger.getLogger(AbstractExplorerService.class.getName());
+
     /**
      * Default constructor.
      * Subclass should be an injectable class, don't call this constructor explicitly.
@@ -207,9 +209,9 @@ public abstract class AbstractExplorerService implements ExplorerService {
         var roleAccess = this.securityContext.isCallerInRole(role);
 
         if (isSecured) {
-            if (denyAccess) {
+            if (denyAccess && !permitAccess) {
                 throw new ActionDeniedException(entry.getPath(), action, "Unauthorized operation");
-            } else if (!authAccess && !publicAccess) {
+            } else if (!authAccess && !publicAccess ) {
                 throw new ActionDeniedException(entry.getPath(), action, "User not authenticate");
             } else if (authAccess && !permitAccess && !roleAccess) {
                 throw new ActionDeniedException(entry.getPath(), action, "Insufficient authorization");

@@ -1,15 +1,15 @@
 version: '3.7'
 
 services:
-    tomcat:
-      image: chexplorer:latest
-      container_name: explorer_container
-      ports:
-        - "8080:8080"
-      depends_on:
-        - postgresql
-      networks:
-        - main
+#    tomcat:
+#      image: chexplorer:latest
+#      container_name: explorer_container
+#      ports:
+#        - "8080:8080"
+#      depends_on:
+#        - postgresql
+#      networks:
+#        - main
 
     postgresql :
       image: postgres:13.0-alpine

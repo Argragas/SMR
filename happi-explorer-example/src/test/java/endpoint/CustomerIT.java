@@ -9,10 +9,12 @@ import org.junit.jupiter.api.Test;
 import util.TokenGenerator;
 import util.WebContext;
 
+import java.util.logging.Logger;
+
 class CustomerIT {
 
     private static final String ENDPOINT = String.join("/", WebContext.API_BASE_URL, "entity", "customer");
-
+    private static final Logger LOG = Logger.getLogger(CustomerIT.class.getName());
     CustomerIT() {
     }
 
@@ -32,6 +34,7 @@ class CustomerIT {
     void testFind() {
         var path = String.join("/", ENDPOINT, DataSet.JOHN_DOE_ID);
         var jwt = TokenGenerator.generateNewToken();
+
 
         RestAssured
                 .given()

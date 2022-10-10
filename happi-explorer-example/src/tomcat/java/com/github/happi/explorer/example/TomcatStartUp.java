@@ -50,7 +50,7 @@ public class TomcatStartUp implements ServletContextListener {
         jtaPropertyManager.getJTAEnvironmentBean().setTransactionSynchronizationRegistryJNDIContext("java:comp/env/TransactionSynchronizationRegistry");
 
         this.service.pingDatabase();
-        this.service.populateDatabase();
+//        this.service.populateDatabase();
     }
 
     @Override

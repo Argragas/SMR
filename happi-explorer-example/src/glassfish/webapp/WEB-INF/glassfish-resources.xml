@@ -11,8 +11,8 @@
             max-pool-size="32"
             steady-pool-size="8">
 
-        <property name="ServerName" value="postgresql"/>
-        <property name="PortNumber" value="5432"/>
+        <property name="ServerName" value="0.0.0.0"/>
+        <property name="PortNumber" value="8042"/>
         <property name="DatabaseName" value="explorer"/>
         <property name="ConnectionAttributes" value=";create=true"/>
         <property name="User" value="APP"/>

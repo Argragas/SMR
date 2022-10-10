@@ -9,7 +9,7 @@
             type="javax.sql.DataSource"
             username="poi"
             password="pwd_fabnum_postgres!"
-            url="jdbc:postgresql://postgresql:5432/explorer"
+            url="jdbc:postgresql://0.0.0.0:8042/explorer"
     />
 
     <!-- CDI Support -->
